@@ -1,3 +1,4 @@
+import logging
 import tornado.ioloop
 import tornado.web
 from book import Book
@@ -20,8 +21,10 @@ def make_app():
         ])
  
 if __name__ == "__main__":
+    logging.debug("Starting Admintome Book API")
     app = make_app()
     app.listen(8888)
+    print("Listinging for connections")
     try:
         tornado.ioloop.IOLoop.current().start()
     except KeyboardInterrupt:

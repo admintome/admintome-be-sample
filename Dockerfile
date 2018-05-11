@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8888
 
-CMD [ "python", "./api.py" ]
+CMD [ "python", "-u", "./api.py" ]
